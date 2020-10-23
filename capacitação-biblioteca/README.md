@@ -1,5 +1,3 @@
-"# Projetos-para-Estudo" 
-
 História de Usuário
 
 COMO dono de uma biblioteca QUERO uma ferramenta de gestão PARA agilizar funções
