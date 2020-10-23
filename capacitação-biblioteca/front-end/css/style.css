@@ -1,59 +1,55 @@
-html,
-body {
-  height: 100%;
-  width: 100%;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
 }
 
-
 .main {
     width: 100%;
+    height: 100%;
 }
-
 
 .header h1 {
     color: white;
     background-color: rgb(38, 119, 92);
     margin: 0;
-    padding: 20px 14px;
+    padding: 10px 14px;
     text-align: center;
 }
 
-.aside {
-    width: 200px;
-    max-height: 450px;
+ul {
+    list-style: none;
 }
 
-.aside ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+nav {
+    width: 200px;
+    height: 100vh;
+    left: 0;
     background-color: rgb(38, 119, 92);
 }
 
-.aside li {
+nav a {
     padding: 10px 16px;
+    width: 100%;
     color: white;
     cursor: pointer;
     outline: none;
     display: block;
+    text-decoration: none;
 }
 
-.aside ul li:hover {
+nav a:hover {
     background-color: rgb(71, 250, 187);
     color: rgb(0, 0, 0);
     padding-left: 30px;
     transition: 0.7s;
 }
 
-
 footer {
     text-align: center;
-    align-content: center;
     font-style: italic;
 }
