@@ -1,0 +1,81 @@
+body {
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+}
+
+.form ::placeholder {
+    opacity: 55%;
+}
+
+.form {
+    margin-top: 40px;
+}
+
+.form h1 {
+    font-family: Arial;
+    color: white;
+    padding: 5px;
+    background-color: rgb(44, 129, 240);
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.712);
+    margin-bottom: 40px;
+}
+
+.soma, .subt, .mult, .divis {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.466);
+}
+
+.soma {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 615px;
+    height: 250px;
+    border:  4px double rgb(44, 129, 240);
+}
+
+.subt {
+    display: inline-block;
+    box-sizing: border-box;
+    position: fixed;
+    left: 805px;
+    width: 615px;
+    height: 250px;
+    border:  4px double rgb(44, 129, 240);
+
+}
+
+.mult {
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 40px;
+    width: 615px;
+    height: 250px;
+    border:  4px double rgb(44, 129, 240);
+
+}
+
+.divis {
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 40px;
+    left: 805px;
+    width: 615px;
+    height: 250px;
+    border:  4px double rgb(44, 129, 240);
+}
+
+.btn {
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    background-color: rgb(230, 25, 25);
+    padding: 4px 8px;
+    border: 0;
+    border-radius: 2px;
+}
+
+.res {
+    font-family: Arial;
+    color: white;
+    background-color:  rgb(44, 129, 240);
+}
+
+
