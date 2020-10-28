@@ -45,6 +45,16 @@ input {
     background-color: rgb(240, 36, 36);
 }
 
+.limpar {
+    padding: 4px 10px;
+    cursor: pointer;
+    outline: none;
+    border: initial;
+    color: white;
+    background-color: rgb(48, 124, 29);
+}
+
+
 .resultado {
     text-align: justify;
 }

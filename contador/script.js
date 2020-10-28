@@ -33,5 +33,20 @@ calcular.addEventListener('click', function () {
     }
 })
 
+const limpar = document.querySelector('.limpar')
+
+limpar.addEventListener('click', function () {
+    const resultado = document.querySelector('.resultado')
+    const min = document.querySelector('.valor-min')
+    const max = document.querySelector('.valor-max')
+    const cont = document.querySelector('.valor-cont')
+
+    min.value = ''
+    max.value = ''
+    cont.value = ''
+
+    resultado.innerHTML = ''
+
+})
 
 
