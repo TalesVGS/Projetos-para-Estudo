@@ -36,6 +36,7 @@ public class Livro implements Serializable {
 
     @NotNull
     @NotBlank
+    @Size(max = 13)
     @Column(name = "isbn")
     private String isbn;
 
