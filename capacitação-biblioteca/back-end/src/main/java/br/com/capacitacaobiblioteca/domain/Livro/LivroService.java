@@ -14,8 +14,16 @@ public class LivroService {
 
     public List<Livro> findAll() { return livroRepository.findAll(); }
 
+    public Livro findOne(long id) {
+        return livroRepository.findById(id).get();
+    }
+
     public Livro save(Livro livro, Errors errors) {
         return livroRepository.save(livro);
+    }
+
+    public void deleteById(long id) {
+        livroRepository.deleteById(id);
     }
 
 }

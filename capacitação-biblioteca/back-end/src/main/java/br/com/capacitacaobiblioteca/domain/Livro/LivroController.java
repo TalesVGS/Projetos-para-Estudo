@@ -29,4 +29,15 @@ public class LivroController extends ResponseAbstractController {
         return jsonResponse(livroService.save(livro, errors));
     }
 
+    @GetMapping("{id}")
+    public ResponseEntity<?> findOne(@PathVariable long id) {
+        return jsonResponse(livroService.findOne(id));
+    }
+
+    @DeleteMapping("{id}")
+    public ResponseEntity<?> deletebyId(@PathVariable long id) {
+        livroService.deleteById(id);
+        return jsonResponse();
+    }
+
 }
