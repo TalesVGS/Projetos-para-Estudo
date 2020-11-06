@@ -6,6 +6,7 @@
 
 body {
     background-color: white;
+    height: 500vh;
 }
 
 .btn-div {
@@ -40,6 +41,7 @@ input {
     padding: 4px 10px;
     cursor: pointer;
     outline: none;
+    border-radius: 4px;
     border: initial;
     color: white;
     background-color: rgb(240, 36, 36);
@@ -50,12 +52,22 @@ input {
     cursor: pointer;
     outline: none;
     border: initial;
+    border-radius: 4px;
     color: white;
     background-color: rgb(48, 124, 29);
 }
-
 
 .resultado {
     text-align: justify;
 }
 
+.btn-open-modal {
+    padding: 4px 10px;
+    cursor: pointer;
+    outline: none;
+    border: initial;
+    border-radius: 4px;
+    color: white;
+    background-color: rgb(83, 109, 255);
+    margin: auto;
+}
