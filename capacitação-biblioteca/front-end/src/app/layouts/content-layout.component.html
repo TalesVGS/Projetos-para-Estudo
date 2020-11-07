@@ -1,3 +1,22 @@
-<div class="content">
-    <router-outlet></router-outlet>
-</div>
+<div class="container">
+    <header class="header">
+        <h1>BIBLIOTECA</h1>
+    </header>
+
+    <main class="main">
+        <nav>
+            <ul>
+                <li [routerLink]="['']"><a>Dashboard</a></li>
+                <li [routerLink]="['/categoria']"><a>Categoria de Livros</a></li>
+                <li [routerLink]="['/livro']"><a>Livros</a></li>
+                <li><a>Estantes</a></li>
+                <li><a>Seções</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <router-outlet></router-outlet>
+        </div>
+    </main>
+    <footer class="footer">
+        <span>&copy; Tales Víctor</span>
+    </footer>
