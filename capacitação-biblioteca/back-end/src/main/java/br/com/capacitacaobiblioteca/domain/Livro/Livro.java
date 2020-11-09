@@ -35,10 +35,8 @@ public class Livro implements Serializable {
     private String autor;
 
     @NotNull
-    @NotBlank
-    @Size(max = 13)
     @Column(name = "isbn")
-    private String isbn;
+    private int isbn;
 
 
     /* @Column(name = "categoria")
