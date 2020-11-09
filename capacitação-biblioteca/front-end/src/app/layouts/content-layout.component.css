@@ -26,10 +26,6 @@
     padding: 25px 30px;
 }
 
-li {
-    outline-style: none;
-}
-
 ul {
     list-style: none;
     height: 100%;
@@ -39,6 +35,10 @@ nav {
     width: 230px;
     height: 100%;
     background-color: rgb(38, 119, 92);
+}
+
+li {
+    outline: none;
 }
 
 nav a {

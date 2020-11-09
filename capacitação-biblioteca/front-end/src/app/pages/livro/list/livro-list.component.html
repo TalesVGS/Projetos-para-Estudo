@@ -1,0 +1,32 @@
+<div class="listagem">
+    <header class="header">
+        <h1>Livros</h1>
+    </header>
+    <div class="other">
+        <button class="btn-new-livro" [routerLink]="['/livro/novo']">+ Livro</button>
+        <input type="text" maxlength="120" placeholder="Pesquisar" size="30">
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Autor</th>
+                <th>ISBN</th>
+                <th>Categoria</th>
+                <th class="actions">Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let livro of livros">
+                <td>{{ livro.titulo }}</td>
+                <td>{{ livro.autor }}</td>
+                <td>{{ livro.isbn }}</td>
+                <td>{{ livro.categoria }}</td>
+                <td>
+                    <button class="btn-edit">Alterar</button>
+                    <button class="btn-delete" (click)="deleteById(livro.id)">Excluir</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

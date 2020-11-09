@@ -1,0 +1,64 @@
+.other input{
+    padding: 6px;
+    outline: none;
+    border: solid black 1px;
+    border-radius: 2px;
+    font-size: small;
+    margin-left: 900px;
+}
+
+.btn-new-livro {
+    background-color: rgb(77, 103, 253);
+    padding: 8px 12px;
+    font-size: medium;
+    margin-top: 20px;
+}
+
+input::placeholder {
+    color: rgba(128, 126, 126, 0.548);
+}
+
+.table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.table thead {
+    background-color: rgb(221, 221, 221);
+    color: rgb(0, 0, 0);
+}
+
+.table thead th,
+.table tbody td {
+  font-size: medium;
+  border: 1.5px rgb(179, 178, 178) solid;
+}
+
+.table tbody td {
+    text-align: center;
+}
+
+.table thead th {
+    padding: 8px 75px;
+}
+
+.btn-edit {
+    background-color: rgb(30, 189, 64);
+    margin: 8px;
+    padding: 4px 10px;
+}
+
+.btn-delete {
+    background-color: rgb(206, 37, 37);
+    padding: 4px 10px;
+    margin: 8px;
+}
+
+.btn-edit, .btn-new-livro, .btn-delete{
+    color: white;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+}

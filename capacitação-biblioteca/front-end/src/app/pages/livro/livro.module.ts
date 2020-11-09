@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { LivroListComponent } from './list/livro-list.component';
 import { LivroRoutingModule } from './livro-routing.module';
-import { LivroComponent } from './livro.component';
+import { LivroService } from './livro.service';
 
 @NgModule({
-    declarations: [LivroComponent],
+    declarations: [LivroListComponent],
     imports: [CommonModule, LivroRoutingModule],
-    providers: [],
+    providers: [LivroService],
 })
 export class LivroModule {}
