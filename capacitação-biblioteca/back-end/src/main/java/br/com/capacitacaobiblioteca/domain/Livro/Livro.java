@@ -26,13 +26,13 @@ public class Livro implements Serializable {
     @NotBlank
     @Size(max = 120)
     @Column(name = "título")
-    private String título;
+    private String titulo;
 
     @NotEmpty
     @NotBlank
     @Size(max = 120)
-    @Column(name = "nomeAutor")
-    private String nomeAutor;
+    @Column(name = "autor")
+    private String autor;
 
     @NotNull
     @NotBlank
