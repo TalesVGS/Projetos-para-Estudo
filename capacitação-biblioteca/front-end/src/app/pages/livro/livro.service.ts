@@ -2,6 +2,7 @@ import { Injectable } from "@angular/core";
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import Livro from './Livro';
+import { LivroRoutingModule } from './livro-routing.module';
 
 @Injectable({
     providedIn: 'root',
@@ -18,5 +19,17 @@ export class LivroService {
 
     deleteById(id: number): Observable<any> {
         return this.http.delete(`${this.url}/${id}`);
+    }
+
+    save(data: Livro): Observable<Livro> {
+        if(data.id) {
+            return this.http.put<Livro>(this.url, data);
+        } else {
+            return this.http.post<Livro>(this.url, data);
+        }
+    }
+
+    findById(id: number): Observable<Livro> {
+        return this.http.get<Livro>(`${this.url}/${id}`);
     }
 }

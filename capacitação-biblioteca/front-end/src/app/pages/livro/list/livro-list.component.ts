@@ -22,6 +22,6 @@ export class LivroListComponent implements OnInit {
   }
 
   deleteById(id: number): void {
-    this.livroService.deleteById(id).subscribe(()=> console.log('deletou'));
+    this.livroService.deleteById(id).subscribe(()=> this.findAllLivros());
   }
 }

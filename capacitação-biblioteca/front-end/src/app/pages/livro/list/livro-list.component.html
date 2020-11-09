@@ -23,7 +23,7 @@
                 <td>{{ livro.isbn }}</td>
                 <td>{{ livro.categoria }}</td>
                 <td>
-                    <button class="btn-edit">Alterar</button>
+                    <button class="btn-edit" [routerLink]="['/livro/alterar', livro.id]">Alterar</button>
                     <button class="btn-delete" (click)="deleteById(livro.id)">Excluir</button>
                 </td>
             </tr>
