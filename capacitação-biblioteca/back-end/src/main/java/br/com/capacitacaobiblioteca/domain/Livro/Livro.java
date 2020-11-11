@@ -1,5 +1,6 @@
 package br.com.capacitacaobiblioteca.domain.Livro;
 
+import br.com.capacitacaobiblioteca.domain.Categoriadelivro.Categoria;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -35,13 +36,13 @@ public class Livro implements Serializable {
     private String autor;
 
     @NotNull
+    @Size(max = 13)
     @Column(name = "isbn")
-    private int isbn;
+    private String isbn;
 
-
-    /* @Column(name = "categoria")
-      private String categoria; */
-
-
+    @NotNull
+    @JoinColumn(name = "categoria_id", referencedColumnName = "id")
+    @ManyToOne(fetch = FetchType.EAGER)
+    private Categoria categoria;
 
 }
