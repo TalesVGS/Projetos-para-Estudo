@@ -1,11 +1,15 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from 'src/app/shared/shared.module';
 import { CategoriaRoutingModule } from './categoria-routing.module';
-import { CategoriaComponent } from './categoria.component';
+import { CategoriaService } from './categoria.service';
+import { CategoriaFormComponent } from './form/categoria-form.component';
+import { CategoriaListComponent } from './list/categoria-list.component';
 
 @NgModule({
-    declarations: [CategoriaComponent],
-    imports: [CommonModule, CategoriaRoutingModule],
-    providers: [],
+    declarations: [CategoriaListComponent, CategoriaFormComponent],
+    imports: [CommonModule, CategoriaRoutingModule, ReactiveFormsModule, FormsModule, SharedModule],
+    providers: [CategoriaService],
 })
 export class CategoriaModule {}

@@ -8,8 +8,7 @@ form {
     font-size: medium;
 }
 
-input,
-select {
+input {
     width: 100%;
     padding: 6px 14px;
     outline: none;
@@ -17,9 +16,6 @@ select {
     border-radius: 5px;
     color: rgb(107, 107, 107);
     font-weight: 500;
-}
-
-#categoria {
     margin-top: 2px;
 }
 

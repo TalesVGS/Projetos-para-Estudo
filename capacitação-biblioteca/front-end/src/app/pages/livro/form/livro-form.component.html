@@ -1,24 +1,54 @@
-<div class="div-form">
-    <form class="form" [formGroup]="livroForm">
-        <label>
-            Título: <input type="text" maxlength="120" placeholder="Título" formControlName="titulo">
-        </label>
-            <label>
-                Autor: <input type="text" maxlength="120" placeholder="Autor" formControlName="autor">
-            </label>
-                <label>
-                    Isbn: <input type="text" maxlength="13" size="20" class="isbn" placeholder="Exemplo: 9788533302273" formControlName="isbn">
-                </label>
-                   <br><button class="btn-cancel" (click)="Cancel()">Cancelar</button>
-                   <button class="btn-save" (click)="Save(livroForm.value)">Salvar</button>
-        <!-- <label>
-            Categoria:
-            <select>
-                <option>
-                    teste
-                </option>
-            </select>
-        </label> -->
+<form class="form" [formGroup]="livroForm">
+    <div>
+        <app-field-validation-container [required]="true">
+            <label label> Título </label>
+            <input 
+            input
+            type="text" 
+            maxlength="120" 
+            placeholder="Título" 
+            formControlName="titulo"
+            />
+        </app-field-validation-container>
 
-    </form>
-</div>
+        <app-field-validation-container [required]="true">
+            <label label> Autor </label>
+            <input
+            input
+            type="text" 
+            maxlength="120" 
+            placeholder="Autor" 
+            formControlName="autor"
+            />
+        </app-field-validation-container>
+
+        <app-field-validation-container [required]="true">    
+            <label label> Isbn </label>
+            <input
+            input 
+            type="text" 
+            maxlength="13" 
+            class="isbn" 
+            placeholder="Exemplo: 9788533302273" 
+            formControlName="isbn"
+            (input)="justNumbers($event)"
+            />
+        </app-field-validation-container>
+
+        <app-field-validation-container [required]="true">    
+            <label label> Categoria </label>
+            <select input id="categoria" class="form-control" formControlName="categoria" [compareWith]="compareFn">
+                <option value="" hidden>Selecione uma opção</option>
+                <option *ngFor="let categoria of categorias" [ngValue]="categoria">{{ categoria.categoria }}</option>
+            </select>
+        </app-field-validation-container>
+
+        <div class="footer">
+            <div class="buttons">
+                <br><button class="btn-cancel" (click)="Cancel()">Cancelar</button>
+                <button class="btn-save" (click)="Save(livroForm.value)">Salvar</button>
+            </div>    
+        </div>
+       
+    </div>
+</form>

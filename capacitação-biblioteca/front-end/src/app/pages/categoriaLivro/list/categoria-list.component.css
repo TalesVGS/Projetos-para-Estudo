@@ -4,10 +4,10 @@
     border: solid black 1px;
     border-radius: 2px;
     font-size: small;
-    margin-left: 900px;
+    margin-left: 850px;
 }
 
-.btn-new-livro {
+.btn-new-category {
     background-color: rgb(77, 103, 253);
     padding: 8px 12px;
     font-size: medium;
@@ -56,7 +56,7 @@ input::placeholder {
     margin: 8px;
 }
 
-.btn-edit, .btn-new-livro, .btn-delete{
+.btn-edit, .btn-new-category, .btn-delete{
     color: white;
     cursor: pointer;
     border: none;

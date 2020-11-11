@@ -1,12 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from "@angular/router";
-import { CategoriaComponent } from './categoria.component';
+import { CategoriaFormComponent } from './form/categoria-form.component';
+import { CategoriaListComponent } from './list/categoria-list.component';
 
 
 const routes: Routes = [
     {
         path: '',
-        component: CategoriaComponent,
+        component: CategoriaListComponent,
+    },
+    {
+        path: 'novo',
+        component: CategoriaFormComponent,
+    },
+    {
+        path: 'alterar/:id',
+        component: CategoriaFormComponent,
     },
 ];
 

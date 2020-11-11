@@ -1,0 +1,21 @@
+<form class="form" [formGroup]="categoriaForm">
+    <div class="div">
+        <app-field-validation-container [required]="true">
+            <label label class="label"> Categoria </label>
+            <input 
+            input
+            type="text" 
+            maxlength="120" 
+            placeholder="Categoria" 
+            formControlName="categoria"
+            />
+        </app-field-validation-container>
+
+        <div class="footer">
+            <div class="buttons">
+                <br><button class="btn-cancel" (click)="Cancel()">Cancelar</button>
+                <button class="btn-save" (click)="Save(categoriaForm.value)">Salvar</button>
+            </div>    
+        </div>
+    </div>
+</form>

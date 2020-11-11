@@ -1,0 +1,26 @@
+<div class="listagem">
+    <header class="header">
+        <h1>Categoria</h1>
+    </header>
+    <div class="other">
+        <button class="btn-new-category" [routerLink]="['/categoria/novo']">+ Categoria</button>
+        <input type="text" maxlength="120" placeholder="Pesquisar" size="30">
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Categoria</th>
+                <th class="actions">Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let categoria of categorias">
+                <td>{{ categoria.categoria }}</td>
+                <td>
+                    <button class="btn-edit" [routerLink]="['/categoria/alterar', categoria.id]">Alterar</button>
+                    <button class="btn-delete" (click)="deleteById(categoria.id)">Excluir</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
