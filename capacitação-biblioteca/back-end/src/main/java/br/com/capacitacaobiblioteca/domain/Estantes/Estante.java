@@ -1,6 +1,7 @@
-package br.com.capacitacaobiblioteca.domain.Categoriadelivro;
+package br.com.capacitacaobiblioteca.domain.Estantes;
 
 import br.com.capacitacaobiblioteca.domain.Livro.Livro;
+import br.com.capacitacaobiblioteca.domain.Seções.Seção;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
@@ -8,15 +9,16 @@ import lombok.Setter;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.util.List;
 
 @Entity
-@Table(name = "categoria")
+@Table(name = "estante")
 @Getter
 @Setter
-public class Categoria implements Serializable {
+public class Estante implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
@@ -27,11 +29,16 @@ public class Categoria implements Serializable {
     @NotEmpty
     @NotBlank
     @Size(max = 120)
-    @Column(name = "categoria")
-    private String categoria;
+    @Column(name = "estante")
+    private String estante;
 
     @JsonIgnore
-    @OneToMany(mappedBy = "categoria")
+    @OneToMany(mappedBy = "estante")
     private List<Livro> livros;
+
+    @NotNull
+    @JoinColumn(name = "seção_id", referencedColumnName = "id")
+    @ManyToOne(fetch = FetchType.EAGER)
+    private Seção seção;
 
 }

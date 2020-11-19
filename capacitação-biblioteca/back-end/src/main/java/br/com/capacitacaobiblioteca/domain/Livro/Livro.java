@@ -1,6 +1,7 @@
 package br.com.capacitacaobiblioteca.domain.Livro;
 
 import br.com.capacitacaobiblioteca.domain.Categoriadelivro.Categoria;
+import br.com.capacitacaobiblioteca.domain.Estantes.Estante;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -44,5 +45,10 @@ public class Livro implements Serializable {
     @JoinColumn(name = "categoria_id", referencedColumnName = "id")
     @ManyToOne(fetch = FetchType.EAGER)
     private Categoria categoria;
+
+    @NotNull
+    @JoinColumn(name = "estante_id", referencedColumnName = "id")
+    @ManyToOne(fetch = FetchType.EAGER)
+    private Estante estante;
 
 }

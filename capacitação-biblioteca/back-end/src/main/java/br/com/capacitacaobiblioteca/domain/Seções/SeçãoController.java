@@ -1,10 +1,10 @@
-package br.com.capacitacaobiblioteca.domain.Categoriadelivro;
+package br.com.capacitacaobiblioteca.domain.Seções;
 
 import br.com.capacitacaobiblioteca.core.Controller.AbstractController;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/categoria")
-public class CategoriaController extends AbstractController<Categoria> {
+@RequestMapping("/seção")
+public class SeçãoController extends AbstractController<Seção> {
 }
